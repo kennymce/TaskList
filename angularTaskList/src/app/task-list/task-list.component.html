@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="taskListHeader">
+    <div class="tasksCount">
+      <span>Tasks: ({{this.tasks.length}})</span>
+    </div>
+    <div class="addTaskButton">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" (click)="addNewTask()">
+        + Add Task
+      </button>
+    </div>
+    <div class="horizontalLine">
+      <hr class="horizontalLine"/>
+    </div>
+  </div>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{this.modalHeadingText}}</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+          <form name="taskForm" id="taskForm" #taskForm="ngForm" novalidate>
+            <div class="form-group">
+              <label for="taskName">Task Name</label>
+              <input type="text" class="form-control" [(ngModel)]="addEditTask.taskName" id="taskName" name="taskName"
+                     placeholder="e.g. &quot;Review Test Plan&quot;" required="true">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" [(ngModel)]="addEditTask.description" id="description" name="description"
+                        rows="3"
+                        placeholder="Enter a description which accurately describes the task (max 1000 characters)"
+                        required="true"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="taskStatus">Status</label>
+              <select class="form-control" id="taskStatus" [(ngModel)]="addEditTask.taskStatusId" name="taskStatus"
+                      required="true">
+                <option *ngFor="let status of this.statuses"
+                        [value]="status.taskStatusId">{{status.statusName}}</option>
+              </select>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="doTaskAction('new')" [disabled]="!taskForm.valid"
+                  data-dismiss="modal">{{this.actionbuttonText}}
+          </button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mainGrid table-hover">
+    <table class="table table-small">
+      <thead>
+      <tr>
+        <th>Task Id</th>
+        <th>Task Name</th>
+        <th>Description</th>
+        <th>Date/time created</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let task of this.tasks" class="taskTableRow">
+        <td>{{task.taskId}}</td>
+        <td>{{task.taskName}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.dateTimeCreated}}</td>
+        <td>{{mapTaskStatusEnum(task.taskStatusId)}}</td>
+        <td class="actionButtonCell">
+          <button id="editTask" class="btn btn-light actionButton"  data-toggle="modal" data-target="#myModal" (click)="editTask(task)">
+            <span class="glyphicon glyphicon-edit actionButton"></span> Edit
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

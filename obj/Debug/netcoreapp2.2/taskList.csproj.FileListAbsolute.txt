@@ -1,0 +1,14 @@
+C:\dev\taskList\bin\Debug\netcoreapp2.2\taskList.deps.json
+C:\dev\taskList\bin\Debug\netcoreapp2.2\taskList.runtimeconfig.json
+C:\dev\taskList\bin\Debug\netcoreapp2.2\taskList.runtimeconfig.dev.json
+C:\dev\taskList\bin\Debug\netcoreapp2.2\taskList.dll
+C:\dev\taskList\bin\Debug\netcoreapp2.2\taskList.pdb
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.csprojAssemblyReference.cache
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.csproj.CoreCompileInputs.cache
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.RazorAssemblyInfo.cache
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.RazorAssemblyInfo.cs
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.AssemblyInfoInputs.cache
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.AssemblyInfo.cs
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.RazorTargetAssemblyInfo.cache
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.dll
+C:\dev\taskList\obj\Debug\netcoreapp2.2\taskList.pdb

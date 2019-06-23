@@ -1,0 +1,57 @@
+@headerWidth: 90%;
+
+.table {
+  border-top: none;
+}
+.table thead th {
+  border-top: none;
+  border-bottom: 1px solid #000!important;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.table td {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-top: none!important;
+}
+
+.mainGrid {
+  padding: 50px 0 0 20px;
+  width: 100%;
+  margin:0 auto;
+}
+
+.taskListHeader {
+  width: @headerWidth;
+  height: 30px;
+}
+
+.tasksCount {
+  float: left;
+  font-size: 20px;
+  padding-left: 5%;
+}
+
+.addTaskButton {
+  float: right;
+}
+.horizontalLine {
+  padding-top: 25px;
+  padding-left: 5%;
+}
+
+.actionButtonCell {
+  width: 70px;
+}
+
+button.actionButton {
+  opacity: 0;
+  color: #8c8c8c;
+}
+
+.taskTableRow:hover .actionButton {
+  display: flow;
+  cursor: pointer;
+  opacity: 1;
+}
